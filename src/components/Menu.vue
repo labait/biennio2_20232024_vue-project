@@ -1,19 +1,33 @@
 <script setup>
 
+  let period = "morning";
+  const hours = new Date().getHours();
+  if(hours > 10 ) period = "afternoon";
+  if(hours > 20 ) period = "evening";
   const menuItems = [
     { name: 'Home', link: '#' },
     { name: 'About', link: '#' },
-    { name: 'Contact', link: '#' }
+    { name: 'Contact', link: '#' },
+    { name: 'logout', link: '#' },
   ]
 
 </script>
 
 <template>
-  <ul>
+  <div v-if="period == 'morning'">
+    <h1>Buongiorno!</h1>
+  </div>
+  <div v-if="period == 'afternoon'">
+    <h1>Buon pomeriggio!</h1>
+  </div>
+  <div v-if="period == 'evening'">
+    <h1>Buonasera!</h1>
+  </div>
+  <!-- --><ul>
     <li v-for="menuItem in menuItems">
-      <a href="">{{ menuItem.name }}</a>
+      <a href="">{{ menuItem.id }} {{ menuItem.name }}</a>
     </li>
-  </ul>
+  </ul> 
 </template>
 
 <style lang="scss" scoped>
@@ -37,4 +51,6 @@
     }
   }
 
+
+  
 </style>
