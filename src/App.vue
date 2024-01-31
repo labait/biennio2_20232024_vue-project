@@ -2,10 +2,11 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Menu from './components/Menu.vue'
+import Works from './components/Works.vue'
 </script>
 
 <template>
-  <header>
+  <header v-if="false">
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -14,8 +15,11 @@ import Menu from './components/Menu.vue'
   </header>
 
   <main>
-    <Menu />
-    <TheWelcome />
+    <template v-if="false">
+      <Menu/>
+      <TheWelcome/>
+    </template>
+    <Works />
   </main>
 </template>
 
