@@ -1,24 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import Menu from './components/Menu.vue'
-import Works from './components/Works.vue'
+import Works from './components/Works.vue';
 </script>
 
 <template>
-  <header v-if="false">
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Hello World" />
-    </div>
-  </header>
-
   <main>
-    <template v-if="false">
-      <Menu/>
-      <TheWelcome/>
-    </template>
     <Works />
   </main>
 </template>
@@ -41,7 +26,7 @@ header {
   }
 
   .logo {
-    margin: 0 2rem 0 0;
+    margin: 0 0rem 0 0;
   }
 
   header .wrapper {

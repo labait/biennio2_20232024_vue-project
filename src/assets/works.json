@@ -1,0 +1,8 @@
+[
+    {"name": "Spring 01", "tags": ["spring"], "image": "https://source.unsplash.com/random/?spring,pink,nature=1"},
+    {"name": "Spring 02", "tags": ["spring"], "image": "https://source.unsplash.com/random/?spring,pink,nature=2"},
+    {"name": "Spring 03", "tags": ["spring"], "image": "https://source.unsplash.com/random/?spring,pink,nature=3"},
+    {"name": "Autumn 01", "tags": ["autumn"], "image": "https://source.unsplash.com/random/?autumn,orange,nature=1"},
+    {"name": "Autumn 02", "tags": ["autumn"], "image": "https://source.unsplash.com/random/?autumn,orange,nature=2"},
+    {"name": "Autumn 03", "tags": ["autumn"], "image": "https://source.unsplash.com/random/?autumn,orange,nature=3"}
+]

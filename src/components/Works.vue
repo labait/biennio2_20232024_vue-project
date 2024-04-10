@@ -1,34 +1,40 @@
 <script setup>
-    const works= [
-        {name: "work1", image: "https://source.unsplash.com/random/?green&random=1"},
-        {name: "work2", image: "https://source.unsplash.com/random/?green&random=2"},
-        {name: "work3", image: "https://source.unsplash.com/random/?green&random=3"},
-    ]
+    import works from '../assets/works.js';
+    import List from './List.vue';
+    import Articles from './Articles.vue';
 
-    const questions= [
-        {
-            "question": "superpowers?",
-            "options": [
-                {
-                    value: "fly", points: 1,
-                    value: "strenght", points: 2,
-                }
-            ]
-        }
-    ]
+    const tags =  [...new Set(works.map(w => w.tags).flat())] //.sort()
+    console.log(tags);
 </script>
 
 <template>
-    <h1>Works</h1>
-    list of works
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4" v-for="work in works">
-                <div class="title">{{ work.title }}</div>
-                <img :src="work.image" alt="" class="img-fluid">
-            </div>
-        </div>
+    <Articles />
+    <h1>Seasons</h1>
+    <div class="tag" v-for="tag in tags">
+        <List :title="tag" :items="works.filter(w => w.tags.includes(tag))" />
     </div>
 </template>
 
 
+<style>
+
+h1{  
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+h2{  
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.title{ 
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+</style>
