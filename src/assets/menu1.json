@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Wines",
+    "items": [
+      {"name": "Valpolicella", "category": "red", "price": 5.50},
+      {"name": "Amarone", "category": "red", "price": 6.00},
+      {"name": "Gewurtztraminer", "category": "white", "price": 6.00}
+    ]
+  },
+  {
+    "name": "Cocktails",
+    "items": [
+      {"name": "Margarita", "price": 7.00},
+      {"name": "Martini", "price": 7.00},
+      {"name": "Mojito", "price": 7.00}
+    ]
+  }
+]
+
+
